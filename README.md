@@ -1,1 +1,1 @@
-This the the Intruder Alert IoT project
+This is the Intruder Alert IoT project
