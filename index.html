@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Intruder Alert - Login</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -20,8 +21,8 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">    
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a onclick="changeMode('signup')" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a onclick="changeMode('login')" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
       </div>
     </div>
@@ -30,7 +31,7 @@
       <h3 id="mode">Login</h3>
   </div>
   <div class = "container">
-    <form class="form-horizontal" onsubmit="return onSubmitForm()">
+    <form class="form-horizontal" action="/login" id="form" method="POST" onsubmit="return onSubmitForm()" enctype="multipart/form-data">
       <div class="form-group">
         <label class="control-label col-sm-2" for="email">Email:</label>
         <div class="col-sm-10">
@@ -50,6 +51,6 @@
       </div>
     </form>
   </div>
-  <script type="text/javascript" src="js/index.js"></script>
 </body>
+<script type="text/javascript" src="js/authentication.js"></script>
 </html>
